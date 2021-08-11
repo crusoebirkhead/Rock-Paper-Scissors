@@ -1,0 +1,43 @@
+body{
+    background-color: #fffbdf;
+  }
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+    color: #334443;
+  }
+  h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    color: #34656d;
+  }
+  .players-choice{
+    width: 10%;
+   
+  }
+  
+  .players-choice:hover {
+    transform: scale(1.2);
+  }
+  .button-div{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 150px;
+  }
+  
+  .title-div{
+    text-align: center;
+  }
+  
+  .score{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  
+  #computer-score{
+    padding-left: 120px;
+  }
+  
