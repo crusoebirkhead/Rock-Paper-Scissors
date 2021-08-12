@@ -1,51 +1,62 @@
-//Computer's selection
+
 let hand = ['Rock', 'Paper', 'Scissors'];
-const buttons = document.querySelectorAll('input')
-let playerSelection = buttons.id
+const buttons = document.querySelector('.players-choice')
+// let playerSelection = playerClick()
 let playerScore = 0
 let computerScore = 0
+let score = document.getElementById('score').innerHTML 
+
+//Computer's selection
 function computerChoice(){
   let randomIndex = Math.floor(Math.random() * hand.length);
-  let randomHand = hand[randomIndex];
+  let unknownHand = hand[randomIndex];
 
-  return (randomHand);
+  return (unknownHand);
 }
 
+//User's selection
+let value = ''
+buttons.addEventListener('click', playerClick)
+function playerClick(){
+  value = buttons.id
+  console.log(value)
+}
+
+//Decides winner and counts score
 function responseReturn(playerSelection, randomHand){
 
-  let randomHand = computerChoice()
-
-  let score = ''
+  randomHand = computerChoice()
 
   if (((playerSelection === "Rock" && randomHand === "Paper") ||
   (playerSelection === "Paper" && randomHand === "Scissors") ||
   (playerSelection === "Scissors" && randomHand === "Rock"))){
 
     computerScore += 1
-    score = ("You have lost, " + playerSelection + " beats " + randomHand
-    "<br></br>Player score is" + playerScore + ' and Computer Score is ' + computerScore)
+    let computerWon = document.createTextNode("Computer won!")
+    score.appendChild(computerWon)
+
 
     if (playerScore = 5){
-      score = "You have one the game!"
+      let winner = document.createTextNode("You have won the game!");
+      score.appendChild(winner)
     }
 
-  else if (playerSelection === randomHand);{
-  score = ("It's a tie")
+  else if (playerSelection === randomHand){
+  let tie = document.createTextNode("It's a tie")
+  score.appendChild(tie)
   }
     else{
       playerScore += 1
-      score = ("You have won" + playerSelection + ' beats ' + randomHand)
+      let userWon = document.createTextNode("User won")
+      score.appendChild(userWon)
 
       if (computerScore = 5){
         score = "You have lost the game!"
       }
     }
 }
+}
 
-document.getElementById('score').innerHTML = score
+computerChoice();
 
-buttons.forEach(button =>{
-    button.addEventListener('click', function(){
-        responseReturn(button.value)
-    })
-})
+
