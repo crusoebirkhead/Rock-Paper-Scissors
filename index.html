@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html>
+<body>
 <head>
   <meta charset="utf-8">
   <title>First comes Rock</title>
@@ -9,20 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+
   <div class="title-div">
     <h1>Man vs Machine</h1>
     <h3>Who Will Win?</h3>
   </div>
-  <div class="button-div">
 
-    <input class="players-choice" type="image" id="Rock" value="Rock" src="images/stone.png" alt="Rock" />
-    <input class="players-choice" type="image" id="Paper" value="Paper" src="images/paper.png" alt="Paper" />
-    <input class="players-choice" type="image" id="Scissors" value="Scissors" src="images/scissors.png" alt="Scissors" />
+  <div id="button-div">
+    
+    <button class="players-choice" type="image" id="Rock" value="Rock" alt="Rock"><i class="far fa-hand-rock"></i></button>
+    <button class="players-choice" type="image" id="Paper" value="Paper"  alt="Paper"><i class="far fa-hand-paper"></i></button>
+    <button class="players-choice" type="image" id="Scissors" value="Scissors"  alt="Scissors"><i class="far fa-hand-scissors"></i></button>
+
   </div>
+
   <div id="score">
     
   </div>
+
+  <script src="https://kit.fontawesome.com/8b8d4b9832.js" crossorigin="anonymous"></script>
   <script src="script.js"> </script>
 </body>
 

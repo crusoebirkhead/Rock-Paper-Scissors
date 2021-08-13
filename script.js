@@ -1,26 +1,41 @@
-
+//Global scope
 let hand = ['Rock', 'Paper', 'Scissors'];
-const buttons = document.querySelector('.players-choice')
-// let playerSelection = playerClick()
+let playerSelection = ''
 let playerScore = 0
 let computerScore = 0
 let score = document.getElementById('score').innerHTML 
 
 //Computer's selection
+
 function computerChoice(){
   let randomIndex = Math.floor(Math.random() * hand.length);
   let unknownHand = hand[randomIndex];
-
   return (unknownHand);
 }
 
-//User's selection
-let value = ''
-buttons.addEventListener('click', playerClick)
-function playerClick(){
-  value = buttons.id
-  console.log(value)
+
+// User's selection
+
+let rock = document.getElementById('Rock')
+rock.onclick = function (e){
+  playerSelection = 'Rock'
+  console.log(playerSelection)
 }
+
+let paper = document.getElementById('Paper')
+paper.onclick = function (e){
+  playerSelection = 'Paper'
+  console.log(playerSelection)
+}
+
+let scissors = document.getElementById('Scissors')
+scissors.onclick = function (e){
+  playerSelection = 'Scissors'
+  console.log(playerSelection)
+}
+
+
+
 
 //Decides winner and counts score
 function responseReturn(playerSelection, randomHand){
@@ -56,7 +71,4 @@ function responseReturn(playerSelection, randomHand){
     }
 }
 }
-
-computerChoice();
-
 

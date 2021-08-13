@@ -11,15 +11,27 @@ body{
     font-size: 200%;
     color: #34656d;
   }
+
+  button{
+    border: none;
+  }
+
+  div{
+    background-color: none;
+  }
+
+  i{
+    transform: scale(4.0);
+  }
   .players-choice{
-    width: 10%;
-   
+    width: 50%;
+    background-color: #fffbdf;
   }
   
   .players-choice:hover {
     transform: scale(1.2);
   }
-  .button-div{
+  #button-div{
     display: flex;
     justify-content: space-around;
     padding-top: 150px;
@@ -29,12 +41,12 @@ body{
     text-align: center;
   }
   
-  .score{
+  /* .score{
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 100px;
-  }
+  } */
   
   
   #computer-score{
