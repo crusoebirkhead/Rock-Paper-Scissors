@@ -15,26 +15,20 @@
     <h1>Man vs Machine</h1>
     <h3>Who Will Win?</h3>
 
-  </div>
-
-  <script>
-  function scoreUpdate(variable){
-
-    let computerScore = 0
-    let playerScore = 0
-    document.write(variable);
-    document.write(variable);
-  }
-  </script>
-
-
-  <div class="score-counter">
-
-    <p>Player score: <script>scoreUpdate(variable)</script></p>
-    <p>Computer score: <script>scoreUpdate(variable)</script></p>
+    <div id="score-container2">
+      <p id="player-score"></p>
+      <p id="computer-score"></p>
+    </div>
 
   </div>
 
+  <div id="score-container">
+
+    <p id="player-result"></p> 
+    <p id="tie"></p> 
+    <p id="computer-result"></p>
+    
+  </div>
 
   <div id="button-div">
     
@@ -44,10 +38,7 @@
 
   </div>
 
-  <div id="score-container">
-
-    <p id="score"></p>
-  </div>
+ 
 
 
   <script src="https://kit.fontawesome.com/8b8d4b9832.js" crossorigin="anonymous"></script>

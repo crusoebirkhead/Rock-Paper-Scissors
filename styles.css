@@ -1,5 +1,6 @@
 body{
     background-color: #fffbdf;
+    height: 100%;
   }
   h1{
     font-family: 'Montserrat', sans-serif;
@@ -27,6 +28,12 @@ body{
     width: 50%;
     background-color: #fffbdf;
   }
+
+  p{
+    padding: 20px;
+    width: 100px;
+    font-family: 'Montserrat', sans-serif;
+  }
   
   .players-choice:hover {
     transform: scale(1.2);
@@ -34,29 +41,51 @@ body{
   #button-div{
     display: flex;
     justify-content: space-around;
-    padding-top: 150px;
+    padding-top: 200px;
+    margin-bottom: 30px;
+    position: absolute;
+    width: 100%;
+    height: 10%;
   }
   
   .title-div{
     text-align: center;
   }
   
-  /* .score{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 100px;
-  } */
-  
-  
-  #computer-score{
-    padding-left: 120px;
-  }
   
   #score-container{
   
-    margin: 100px auto 0 auto;
-    width: 10%;
+    margin: 120px auto 0 auto;
+    width: 45%;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 
+  }
+
+  #tie {
+    width: 55%;
+  }
+
+  #player-result{
+    width: 32%;
+  }
+
+  #computer-result{
+    width: 60%;
+  }
+
+  #score-container2{
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 45%;
+  }
+
+  #player-score, #computer-score{
+    width: 85%;
+    font-size: 30px;;
   }
